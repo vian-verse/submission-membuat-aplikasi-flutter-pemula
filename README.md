@@ -1,3 +1,4 @@
-# submission
+# submission 
+## course "Membuat Aplikasi Flutter untuk Pemula" dari dicoding. 
 
-A new Flutter project.
+Membuat aplikasi untuk menghitung body mass index (BMI).
