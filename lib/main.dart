@@ -11,6 +11,10 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        appBar: AppBar(
+          title: Text('Kalkulator BMI', style: TextStyle(color: Colors.white),),
+          backgroundColor: Colors.deepPurpleAccent,
+        ),
         body: SafeArea(
           child: Center(
             child: Column(
@@ -54,7 +58,7 @@ class MainApp extends StatelessWidget {
                         Padding(
                           padding: const EdgeInsets.only(bottom: 32.0),
                           child: Text(
-                            'Glosarium \nKalkulator BMI',
+                            'Glosarium',
                             textAlign: TextAlign.center,
                             style: TextStyle(fontSize: 20,),
                           ),
