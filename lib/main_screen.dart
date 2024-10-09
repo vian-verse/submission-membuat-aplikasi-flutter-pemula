@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:submission/glossary_screen.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({super.key});
@@ -43,7 +44,12 @@ class MainScreen extends StatelessWidget {
                   style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20))),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => GlossaryScreen()),
+                    );
+                  },
                   child: Column(
                     children: [
                       Icon(
