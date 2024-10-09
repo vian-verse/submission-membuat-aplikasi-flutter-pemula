@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:submission/glossary_screen.dart';
 import 'package:submission/main_screen.dart';
 
 void main() {
@@ -13,7 +12,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Kalkulator BMI',
-      home: const GlossaryScreen()
+      home: const MainScreen()
     );
   }
 }
