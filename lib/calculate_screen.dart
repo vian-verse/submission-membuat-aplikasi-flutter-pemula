@@ -22,11 +22,14 @@ class _CalculateScreenState extends State<CalculateScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+
         title: Text(
           'Hitung BMI',
           style: TextStyle(color: Colors.white),
         ),
         backgroundColor: Colors.deepPurpleAccent,
+        iconTheme: IconThemeData(color: Colors.white),
+        
       ),
       body: Form(
         key: formKey,
@@ -85,18 +88,18 @@ class _CalculateScreenState extends State<CalculateScreen> {
                     onPressed: () {
                       if (formKey.currentState!.validate()) {
                         bmi = int.parse(cBerat.text) /
-                            pow((int.parse(cTinggi.text) / 100),2);
-                        if(bmi < 18.5){
+                            pow((int.parse(cTinggi.text) / 100), 2);
+                        if (bmi < 18.5) {
                           kategori = "UNDERWEIGHT";
-                        }else if(bmi < 25){
+                        } else if (bmi < 25) {
                           kategori = "NORMAL";
-                        }else if(bmi < 30){
+                        } else if (bmi < 30) {
                           kategori = "OVERWEIGHT";
-                        }else if(bmi < 35){
+                        } else if (bmi < 35) {
                           kategori = "CLASS I OBESITY";
-                        }else if(bmi < 40){
+                        } else if (bmi < 40) {
                           kategori = "CLASS II OBESITY";
-                        }else{
+                        } else {
                           kategori = "CLASS III OBESITY";
                         }
                         setState(() {

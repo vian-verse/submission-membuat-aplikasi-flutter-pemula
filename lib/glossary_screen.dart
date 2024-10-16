@@ -7,16 +7,11 @@ class GlossaryScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          automaticallyImplyLeading: false,
           title: Text(
             'Glosarium',
             style: TextStyle(color: Colors.white),
           ),
           backgroundColor: Colors.deepPurpleAccent,
-          leading: IconButton(
-            icon: Icon(Icons.arrow_back),
-            onPressed: () => Navigator.pop(context),
-          ),
           iconTheme: IconThemeData(color: Colors.white)),
       body: SafeArea(
           child: Padding(
