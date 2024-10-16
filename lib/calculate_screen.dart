@@ -22,14 +22,12 @@ class _CalculateScreenState extends State<CalculateScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-
         title: Text(
           'Hitung BMI',
           style: TextStyle(color: Colors.white),
         ),
         backgroundColor: Colors.deepPurpleAccent,
         iconTheme: IconThemeData(color: Colors.white),
-        
       ),
       body: Form(
         key: formKey,
@@ -123,15 +121,45 @@ class _CalculateScreenState extends State<CalculateScreen> {
                   height: 40,
                 ),
                 Text(
-                  'BMI: ${bmi.toStringAsFixed(2)} \n\nKategori: $kategori',
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                  'BMI: ${bmi.toStringAsFixed(2)}',
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
                   textAlign: TextAlign.center,
-                )
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Text(
+                  'Kategori:\n$kategori',
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 25,
+                      color: getTextColor(bmi)),
+                  textAlign: TextAlign.center,
+                ),
               ],
             ),
           ),
         )),
       ),
     );
+  }
+
+  Color getTextColor(double bmi) {
+    // Some logic
+    if (bmi == 0) {
+      return Colors.black;
+    } else if (bmi < 18.5) {
+      return Colors.yellow;
+    } else if (bmi < 25) {
+      return Colors.greenAccent;
+    } else if (bmi < 30) {
+      return Colors.yellow;
+    } else if (bmi < 35) {
+      return Colors.amber;
+    } else if (bmi < 40) {
+      return Colors.orange;
+    } else {
+      return Colors.redAccent;
+    }
   }
 }
