@@ -57,7 +57,7 @@ class _CalculateScreenState extends State<CalculateScreen> {
                   validator: (value) {
                     if (value!.isEmpty) {
                       return "nilai berat kosong";
-                    }
+                    } return null;
                   },
                 ),
                 SizedBox(
@@ -76,7 +76,7 @@ class _CalculateScreenState extends State<CalculateScreen> {
                   validator: (value) {
                     if (value!.isEmpty) {
                       return "nilai tinggi kosong";
-                    }
+                    }return null;
                   },
                 ),
                 SizedBox(

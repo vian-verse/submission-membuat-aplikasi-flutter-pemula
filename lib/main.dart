@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:submission/calculate_screen.dart';
 import 'package:submission/main_screen.dart';
 
 void main() {
