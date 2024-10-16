@@ -13,7 +13,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Kalkulator BMI',
-      home: const CalculateScreen()
+      home: const MainScreen()
     );
   }
 }
